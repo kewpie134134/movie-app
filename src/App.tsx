@@ -1,30 +1,7 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import "./App.css";
-
-type Movie = {
-  id: number;
-  original_title: string;
-  poster_path: string;
-  overview: string;
-};
-
-type MovieJson = {
-  adult: boolean;
-  backdrop_path: string;
-  genre_ids: number[];
-  id: number;
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  release_date: string;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
-};
+import type { Movie, MovieJson } from "./types";
 
 function App() {
   const [keyword, setKeyword] = useState("");
@@ -85,7 +62,10 @@ function App() {
             <div className="hero-section-overview">{heroOverview}</div>
           )}
           <div className="hero-section-actions">
-            <button className="hero-section-btn hero-section-btn-primary">
+            <button
+              className="hero-section-btn hero-section-btn-primary"
+              onClick={() => alert("未実装です")}
+            >
               ▶ Play
             </button>
             <button className="hero-section-btn hero-section-btn-secondary">

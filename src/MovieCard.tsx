@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import "./App.css";
 
 type Movie = {
-  id: number;
+  id: string;
   poster_path: string;
   original_title: string;
 };
